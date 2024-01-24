@@ -1,0 +1,6 @@
+@HW2_StoreWebApi_HostAddress = http://localhost:5204
+
+GET {{HW2_StoreWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
