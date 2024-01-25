@@ -1,0 +1,6 @@
+@HW3_StoreWebApi_Storage_HostAddress = http://localhost:5094
+
+GET {{HW3_StoreWebApi_Storage_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
