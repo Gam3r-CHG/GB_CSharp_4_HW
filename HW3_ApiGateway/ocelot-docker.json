@@ -5,7 +5,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "store.api.products",
           "Port": 5204
         }
       ],
@@ -21,7 +21,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "store.api.products",
           "Port": 5204
         }
       ],
@@ -37,7 +37,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "store.api.products",
           "Port": 5204
         }
       ],
@@ -52,7 +52,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "store.api.storage",
           "Port": 5094
         }
       ],
@@ -75,7 +75,7 @@
         {
           "Name": "Products API",
           "Version": "v1",
-          "Url": "http://localhost:5204/swagger/v1/swagger.json"
+          "Url": "http://store.api.products:5204/swagger/v1/swagger.json"
         }
       ]
     },
@@ -86,7 +86,7 @@
         {
           "Name": "Storages API",
           "Version": "v1",
-          "Url": "http://localhost:5094/swagger/v1/swagger.json"
+          "Url": "http://store.api.storage:5094/swagger/v1/swagger.json"
         }
       ]
     }

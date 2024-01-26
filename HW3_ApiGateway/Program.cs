@@ -14,7 +14,7 @@ public class Program
         builder.Services.AddSwaggerGen();
 
         IConfiguration configuration = new ConfigurationBuilder()
-            .AddJsonFile("ocelot.json")
+            .AddJsonFile("ocelot-docker.json")
             .Build();
 
         builder.Services.AddOcelot(configuration);

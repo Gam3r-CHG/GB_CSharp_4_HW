@@ -1,0 +1,39 @@
+﻿services:
+  store.api.storage:
+    image: store-webapi-storage
+    build:
+      context: .
+      dockerfile: HW3_StoreWebApi_Storage/Dockerfile
+    ports:
+      - 8093:5094
+  store.api.products:
+    image: store-webapi-products
+    build:
+      context: .
+      dockerfile: HW2_StoreWebApi/Dockerfile
+    ports:
+      - 8092:5204
+  store.api.gateway:
+    depends_on:
+      - store.api.products
+      - store.api.storage
+    image: store-webapi-gateway
+    build:
+      context: .
+      dockerfile: HW3_ApiGateway/Dockerfile
+    ports:
+      - 8091:5206
+  db.postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pass
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/postgres:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
